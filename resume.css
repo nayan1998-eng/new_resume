@@ -1,0 +1,114 @@
+.container{
+    width:100%;
+    font-size: 1.2rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    animation-name: anim;
+    animation-duration: 5s;
+    animation-iteration-count: 50;
+}
+.main_section{
+    margin: 40px;
+    background-color: gray;
+    color: white;
+}
+marquee:hover{
+    background-color: rgb(221, 129, 129);
+    color: white;
+}
+marquee{
+    margin-top: 40px;
+}
+.separetor{
+    margin: 40px;
+}
+.aboutself{
+    width: 100%;
+}
+.details{
+    margin: 40px;
+    width :50%;
+}
+.photo{
+    width: 50%;
+    margin-left: 600px;
+    margin-top: -130px;
+}
+.img{
+    width: 15%;
+    height: 7%;
+    margin-left: 470px;
+}
+.objective{
+    margin: 40px;
+}
+.headings:hover{
+    background-color: skyblue;
+    text-align: center;
+    color: rgb(240, 128, 128);
+}
+p{
+    margin: 40px;
+}
+.persional_details{
+    margin: 40px;
+}
+.p_d{
+    text-align: justify;
+    margin: 40px;
+}
+.education{
+    margin: 40px;
+}
+table{
+    text-align: center;
+    margin: 40px;
+    width: 94%;
+    border-collapse: collapse;
+}
+.ed1{
+    border: 2px solid black;
+    font-size:30px;
+}
+.ed2{
+    border: 2px solid black;
+}
+.it_skills{
+    margin: 40px;
+}
+.i_t{
+    text-align:justify;
+    margin: 40px;
+}
+.Project{
+    margin: 40px;
+}
+.P_I{
+    margin: 40px;
+}
+.lang{
+    margin: 40px;
+}
+.la{
+    margin: 40px;
+    text-align: center;
+}
+.declearation{
+    margin: 40px;
+}
+.photo2{
+    width: 50%;
+    margin-left: 600px;
+    margin-top: -70px;
+}
+.img2{
+    width: 20%;
+    height: 10;
+    margin-left: 470px;
+}
+.details1{
+    width :50%;
+    margin-left: -170px;
+}
+@keyframes anim{
+    from{background-color: red;}to{background-color: green;}
+}
