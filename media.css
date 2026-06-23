@@ -1,0 +1,122 @@
+@media screen and (max-width: 900px) {
+    .resume-page {
+        margin: 16px auto;
+        padding: 30px;
+        border-radius: 10px;
+    }
+
+    .resume-header {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .contact-block {
+        text-align: left;
+    }
+
+    .item-header {
+        grid-template-columns: 1fr;
+        gap: 4px;
+    }
+
+    .duration {
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    .resume-page {
+        margin: 0;
+        padding: 24px;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .identity-block h1 {
+        font-size: 30px;
+    }
+
+    .role-title {
+        font-size: 15px;
+    }
+
+    .skills-grid,
+    .two-column-section {
+        grid-template-columns: 1fr;
+    }
+
+    .skill-card.full-width {
+        grid-column: auto;
+    }
+
+    .resume-section {
+        padding-top: 20px;
+    }
+
+    .resume-section h2 {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .resume-page {
+        padding: 18px;
+    }
+
+    .identity-block h1 {
+        font-size: 25px;
+        letter-spacing: 0.2px;
+    }
+
+    .role-title {
+        font-size: 14px;
+    }
+
+    .contact-block {
+        gap: 5px;
+        font-size: 13px;
+    }
+
+    .resume-section h2 {
+        font-size: 15px;
+    }
+
+    .resume-section h3 {
+        font-size: 15px;
+    }
+
+    .skill-card {
+        padding: 11px;
+    }
+
+    ul {
+        padding-left: 18px;
+    }
+
+    li {
+        margin-bottom: 7px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .resume-page {
+        padding: 14px;
+    }
+
+    .identity-block h1 {
+        font-size: 22px;
+    }
+
+    .role-title,
+    body {
+        font-size: 13px;
+    }
+
+    .contact-block {
+        font-size: 12.5px;
+    }
+}
