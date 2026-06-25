@@ -1,160 +1,295 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nayan Bora Resume</title>
-    <link rel="stylesheet" href="resume.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Creative resume portfolio for Nayan Bora, Senior Software Engineer and Backend Developer.">
+    <title>Nayan Bora | Creative Resume</title>
+    <link rel="stylesheet" href="resume.css">
 </head>
 <body>
-    <main class="resume-shell">
-        <div class="top-actions no-print">
-            <button type="button" onclick="printResume()">Download PDF</button>
-        </div>
+    <div class="cursor-glow" aria-hidden="true"></div>
+    <div class="page-noise" aria-hidden="true"></div>
 
-        <section class="resume-page">
-            <header class="resume-header">
-                <div class="identity-block">
-                    <p class="eyebrow">Resume</p>
-                    <h1>Nayan Bora</h1>
-                    <p class="role-title">Senior Software Engineer | Backend Developer</p>
-                    <p class="summary-highlight">Python, Perl, C, Java, Linux, SQL, Docker, Kubernetes, GitLab, Jenkins</p>
+    <div class="scroll-progress" aria-hidden="true">
+        <span></span>
+    </div>
+
+    <nav class="top-nav" aria-label="Resume navigation">
+        <a href="#profile">Profile</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <button class="theme-toggle" type="button" aria-label="Toggle theme">Theme</button>
+    </nav>
+
+    <main class="resume-shell">
+        <aside class="profile-rail" id="profile">
+            <div class="profile-card glass-card reveal">
+                <div class="avatar-wrap">
+                    <div class="avatar-ring"></div>
+                    <div class="avatar">NB</div>
                 </div>
 
-                <address class="contact-block">
-                    <a href="mailto:your-email@example.com">your-email@example.com</a>
-                    <a href="tel:+910000000000">+91 00000 00000</a>
-                    <span>Bangalore, India</span>
-                    <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener">LinkedIn</a>
-                    <a href="https://github.com/your-github" target="_blank" rel="noopener">GitHub</a>
-                </address>
+                <p class="eyebrow">Available for Backend Roles</p>
+                <h1>Nayan Bora</h1>
+                <p class="role-line">Senior Software Engineer</p>
+                <p class="profile-note">
+                    I build, debug, and support backend systems across telecom mediation, Linux, databases, and deployment pipelines.
+                </p>
+
+                <div class="contact-stack">
+                    <a href="mailto:your-email@example.com" class="contact-pill">your-email@example.com</a>
+                    <a href="tel:+910000000000" class="contact-pill">+91 00000 00000</a>
+                    <a href="https://www.linkedin.com" class="contact-pill" target="_blank" rel="noreferrer">LinkedIn</a>
+                    <a href="https://github.com" class="contact-pill" target="_blank" rel="noreferrer">GitHub</a>
+                    <span class="contact-pill">Bangalore, India</span>
+                </div>
+            </div>
+
+            <section class="glass-card compact-panel reveal">
+                <h2>Focus</h2>
+                <div class="focus-list">
+                    <span>Backend Development</span>
+                    <span>Python, Perl, C, Java</span>
+                    <span>Linux Debugging</span>
+                    <span>SQL Troubleshooting</span>
+                    <span>Docker, Kubernetes</span>
+                </div>
+            </section>
+
+            <section class="glass-card compact-panel reveal">
+                <h2>Quick Stats</h2>
+                <div class="mini-stats">
+                    <div>
+                        <strong>5+</strong>
+                        <span>Years</span>
+                    </div>
+                    <div>
+                        <strong>4</strong>
+                        <span>Core Languages</span>
+                    </div>
+                    <div>
+                        <strong>24x7</strong>
+                        <span>Prod Mindset</span>
+                    </div>
+                </div>
+            </section>
+        </aside>
+
+        <section class="content-area">
+            <header class="hero-section glass-card reveal">
+                <div class="hero-copy">
+                    <p class="eyebrow">Creative Resume Portfolio</p>
+                    <h2>Backend engineer with strong production debugging skill.</h2>
+                    <p>
+                        Senior Software Engineer with experience in Nokia Mediation Technology, backend development, Linux operations, SQL troubleshooting, CI/CD support, and production issue analysis.
+                    </p>
+                    <div class="hero-actions">
+                        <a class="primary-action" href="#projects">View Projects</a>
+                        <button class="secondary-action" type="button" onclick="window.print()">Download PDF</button>
+                    </div>
+                </div>
+                <div class="hero-orbit" aria-hidden="true">
+                    <div class="orbit-core">DEV</div>
+                    <span class="orbit-chip chip-python">Python</span>
+                    <span class="orbit-chip chip-linux">Linux</span>
+                    <span class="orbit-chip chip-sql">SQL</span>
+                    <span class="orbit-chip chip-docker">Docker</span>
+                </div>
             </header>
 
-            <section class="resume-section profile-section">
-                <h2>Professional Summary</h2>
-                <p>
-                    Senior Software Engineer with 5+ years of experience in telecom mediation, backend development, Linux operations, SQL troubleshooting, and production debugging. Hands-on experience in C, Perl, Python, Java, MySQL, PostgreSQL, Docker, Kubernetes, GitLab, Jenkins, REST APIs, tcpdump, cron jobs, and system-level debugging. Experienced in building, maintaining, and troubleshooting mediation workflows, backend services, database jobs, and production issues.
-                </p>
+            <section class="resume-section reveal" id="summary">
+                <div class="section-title">
+                    <span>01</span>
+                    <h2>Professional Summary</h2>
+                </div>
+                <div class="story-card glass-card">
+                    <p>
+                        Senior Software Engineer with 5+ years of experience in telecom mediation and backend systems. Hands-on with C, Perl, Python, Java, Linux, MySQL, PostgreSQL, Docker, Kubernetes, GitLab, Jenkins, REST APIs, tcpdump, crontab, and production debugging. Strong at reading logs, tracing failures, fixing data flow issues, improving scripts, and supporting releases.
+                    </p>
+                </div>
             </section>
 
-            <section class="resume-section">
-                <h2>Technical Skills</h2>
-                <div class="skills-grid">
-                    <article class="skill-card">
-                        <h3>Programming</h3>
-                        <p>C, Perl, Python, Java, JavaScript</p>
+            <section class="resume-section reveal" id="skills">
+                <div class="section-title">
+                    <span>02</span>
+                    <h2>Technical Skills</h2>
+                </div>
+                <div class="skill-mosaic">
+                    <article class="skill-tile large-tile">
+                        <h3>Languages</h3>
+                        <div class="chip-wall">
+                            <span>Python</span>
+                            <span>Perl</span>
+                            <span>C</span>
+                            <span>Java</span>
+                            <span>JavaScript</span>
+                            <span>Shell Scripting</span>
+                        </div>
                     </article>
-                    <article class="skill-card">
+                    <article class="skill-tile">
                         <h3>Backend</h3>
-                        <p>REST APIs, FastAPI, Flask, JWT, OAuth2, API debugging</p>
+                        <div class="chip-wall">
+                            <span>FastAPI</span>
+                            <span>Flask</span>
+                            <span>REST API</span>
+                            <span>JWT</span>
+                            <span>OAuth2</span>
+                        </div>
                     </article>
-                    <article class="skill-card">
+                    <article class="skill-tile">
                         <h3>Database</h3>
-                        <p>MySQL, PostgreSQL, SQL queries, joins, indexing, troubleshooting</p>
+                        <div class="chip-wall">
+                            <span>MySQL</span>
+                            <span>PostgreSQL</span>
+                            <span>MariaDB</span>
+                            <span>SQL Debugging</span>
+                            <span>Indexes</span>
+                        </div>
                     </article>
-                    <article class="skill-card">
-                        <h3>DevOps</h3>
-                        <p>Docker, Kubernetes pods, GitLab, Jenkins, CI/CD basics</p>
-                    </article>
-                    <article class="skill-card">
-                        <h3>Linux</h3>
-                        <p>Linux commands, shell scripting, cron, logs, tcpdump, IP routing</p>
-                    </article>
-                    <article class="skill-card">
-                        <h3>Tools</h3>
-                        <p>Git, DBD debugger, documentation, software design, production support</p>
+                    <article class="skill-tile wide-tile">
+                        <h3>DevOps and Production</h3>
+                        <div class="chip-wall">
+                            <span>Linux</span>
+                            <span>Docker</span>
+                            <span>Kubernetes Pods</span>
+                            <span>GitLab</span>
+                            <span>Jenkins</span>
+                            <span>tcpdump</span>
+                            <span>IP Routing</span>
+                            <span>Crontab</span>
+                            <span>DBD Debugger</span>
+                        </div>
                     </article>
                 </div>
             </section>
 
-            <section class="resume-section">
-                <h2>Professional Experience</h2>
-
-                <article class="experience-item">
-                    <div class="item-header">
-                        <div>
-                            <h3>Senior Software Engineer</h3>
-                            <p class="company">Infinite Computer Solutions, Client: Nokia</p>
-                        </div>
-                        <p class="duration">2021 to Present</p>
-                    </div>
-                    <ul>
-                        <li>Develop and enhance telecom mediation components using C, Perl, Python, and Java.</li>
-                        <li>Work on Nokia mediation workflows involving file processing, data validation, transformation, and downstream delivery.</li>
-                        <li>Debug production issues using Linux commands, application logs, tcpdump, SQL queries, DBD debugger, and system traces.</li>
-                        <li>Handle database issues in MySQL and PostgreSQL, including query validation, data checks, joins, indexes, and troubleshooting.</li>
-                        <li>Support Docker and Kubernetes-based deployment activities for mediation components and service validation.</li>
-                        <li>Use GitLab and Jenkins for code changes, build validation, deployment checks, and release support.</li>
-                        <li>Create and maintain technical documentation, low-level design notes, operational steps, and issue analysis reports.</li>
-                    </ul>
-                </article>
-            </section>
-
-            <section class="resume-section">
-                <h2>Projects</h2>
-
-                <article class="project-item">
-                    <div class="item-header">
-                        <div>
-                            <h3>Nokia Mediation Technology</h3>
-                            <p class="company">Telecom Mediation, Backend Processing, Production Support</p>
-                        </div>
-                        <p class="duration">C, Perl, Python, Java, SQL, Linux</p>
-                    </div>
-                    <ul>
-                        <li>Worked on telecom mediation modules responsible for processing, validating, and routing usage records.</li>
-                        <li>Handled backend logic changes, defect fixes, code debugging, and deployment support across mediation environments.</li>
-                        <li>Analyzed production failures related to file handling, database connectivity, routing, network access, and service availability.</li>
-                        <li>Used tcpdump, Linux networking commands, logs, cron checks, and database queries to identify issue root causes.</li>
-                        <li>Collaborated with solution architects, testing teams, and operations teams for incident resolution and release activities.</li>
-                    </ul>
-                </article>
-
-                <article class="project-item">
-                    <div class="item-header">
-                        <div>
-                            <h3>Backend API Practice Projects</h3>
-                            <p class="company">FastAPI, Flask, JWT, OAuth2, SQL</p>
-                        </div>
-                        <p class="duration">Personal Learning</p>
-                    </div>
-                    <ul>
-                        <li>Built REST API examples using FastAPI and Flask with request validation, authentication, and error handling.</li>
-                        <li>Implemented JWT-based login flow, OAuth2 password bearer flow, and protected API endpoints.</li>
-                        <li>Practiced SQL operations, pagination, filtering, connection handling, and structured API responses.</li>
-                    </ul>
-                </article>
-            </section>
-
-            <section class="resume-section two-column-section">
-                <div>
-                    <h2>Education</h2>
-                    <article class="compact-item">
-                        <h3>Bachelor's Degree</h3>
-                        <p>Update your degree, college name, university, and passing year here.</p>
-                    </article>
+            <section class="resume-section reveal" id="experience">
+                <div class="section-title">
+                    <span>03</span>
+                    <h2>Experience</h2>
                 </div>
 
-                <div>
-                    <h2>Certifications</h2>
-                    <article class="compact-item">
-                        <h3>Relevant Certifications</h3>
-                        <p>Add Python, SQL, Linux, Docker, Kubernetes, or cloud certifications here.</p>
+                <div class="timeline">
+                    <article class="timeline-item glass-card">
+                        <div class="timeline-dot"></div>
+                        <div class="item-head">
+                            <div>
+                                <h3>Senior Software Engineer</h3>
+                                <p class="company">Infinite Computer Solutions, Nokia Project</p>
+                            </div>
+                            <p class="duration">Update Date, Present</p>
+                        </div>
+                        <ul>
+                            <li>Worked on Nokia mediation technology for telecom data processing, transformation, validation, and operational support.</li>
+                            <li>Developed and maintained components using C, Perl, Python, and Java.</li>
+                            <li>Debugged production issues using Linux commands, logs, tcpdump, SQL queries, DBD debugger, and routing checks.</li>
+                            <li>Supported deployment and build activities using GitLab, Jenkins, Docker, Kubernetes pods, and release pipelines.</li>
+                            <li>Resolved database issues in MySQL, PostgreSQL, MariaDB, and mediation data workflows.</li>
+                        </ul>
+                    </article>
+
+                    <article class="timeline-item glass-card">
+                        <div class="timeline-dot"></div>
+                        <div class="item-head">
+                            <div>
+                                <h3>Software Engineer</h3>
+                                <p class="company">Previous Role, Update Company</p>
+                            </div>
+                            <p class="duration">Update Date, Update Date</p>
+                        </div>
+                        <ul>
+                            <li>Built and supported backend scripts, SQL jobs, data checks, and automation utilities.</li>
+                            <li>Handled issue analysis, documentation, testing support, and release coordination.</li>
+                            <li>Worked with developers, testers, support teams, and business users to close defects and service requests.</li>
+                        </ul>
                     </article>
                 </div>
             </section>
 
-            <section class="resume-section">
-                <h2>Resume Improvement Checklist</h2>
-                <div class="checklist-grid">
-                    <div class="check-card">Use job title keywords from each JD.</div>
-                    <div class="check-card">Keep bullets action-focused.</div>
-                    <div class="check-card">Add measurable impact where possible.</div>
-                    <div class="check-card">Keep PDF print clean and ATS friendly.</div>
+            <section class="resume-section reveal" id="projects">
+                <div class="section-title">
+                    <span>04</span>
+                    <h2>Project Highlights</h2>
+                </div>
+
+                <div class="project-grid">
+                    <article class="project-card glass-card">
+                        <div class="project-top">
+                            <span class="project-icon">01</span>
+                            <span class="project-tag">Telecom</span>
+                        </div>
+                        <h3>Nokia Mediation Data Processing</h3>
+                        <p>
+                            Worked on mediation workflows for telecom record handling, validation, transformation, and production issue resolution.
+                        </p>
+                        <div class="tech-line">C, Perl, Python, Java, Linux, SQL</div>
+                    </article>
+
+                    <article class="project-card glass-card">
+                        <div class="project-top">
+                            <span class="project-icon">02</span>
+                            <span class="project-tag">Backend</span>
+                        </div>
+                        <h3>FastAPI Backend Services</h3>
+                        <p>
+                            Created API concepts using FastAPI, JWT authentication, OAuth2 flow, request validation, file upload, and SQL integration.
+                        </p>
+                        <div class="tech-line">Python, FastAPI, JWT, OAuth2, SQL</div>
+                    </article>
+
+                    <article class="project-card glass-card">
+                        <div class="project-top">
+                            <span class="project-icon">03</span>
+                            <span class="project-tag">Automation</span>
+                        </div>
+                        <h3>Linux Operations and Debugging</h3>
+                        <p>
+                            Used Linux utilities for process checks, network debugging, cron jobs, routing issues, logs, and service validation.
+                        </p>
+                        <div class="tech-line">Linux, tcpdump, cron, ss, lsof, scp, ssh</div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="resume-section reveal">
+                <div class="section-title">
+                    <span>05</span>
+                    <h2>Education and Certifications</h2>
+                </div>
+                <div class="split-cards">
+                    <article class="glass-card info-card">
+                        <h3>Education</h3>
+                        <p>Degree Name, College Name, University</p>
+                        <p class="muted-text">Update year and score</p>
+                    </article>
+                    <article class="glass-card info-card">
+                        <h3>Certifications</h3>
+                        <p>Python, SQL, Cloud, Docker, or Backend related certifications</p>
+                        <p class="muted-text">Add only real certifications</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="resume-section reveal" id="contact">
+                <div class="section-title">
+                    <span>06</span>
+                    <h2>Contact</h2>
+                </div>
+                <div class="contact-banner glass-card">
+                    <div>
+                        <h3>Open to Backend Developer, Python Developer, Perl Developer, and Software Engineer roles.</h3>
+                        <p>Update this line based on the role before applying.</p>
+                    </div>
+                    <a href="mailto:your-email@example.com">Contact Me</a>
                 </div>
             </section>
         </section>
     </main>
+
+    <button class="floating-print" type="button" onclick="window.print()" aria-label="Print resume">PDF</button>
 
     <script src="script.js"></script>
 </body>
