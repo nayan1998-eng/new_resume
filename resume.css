@@ -1,13 +1,16 @@
 :root {
-    --page-bg: #eef1f5;
+    --page-bg: #f3f6fb;
     --card-bg: #ffffff;
-    --primary: #1f2937;
-    --secondary: #4b5563;
+    --primary: #0f172a;
+    --secondary: #475569;
     --accent: #2563eb;
-    --border: #d9dee7;
+    --accent-dark: #1d4ed8;
+    --accent-soft: #eff6ff;
+    --border: #e2e8f0;
     --section-bg: #f8fafc;
     --text: #111827;
-    --muted: #6b7280;
+    --muted: #64748b;
+    --shadow: 0 24px 60px rgba(15, 23, 42, 0.12);
 }
 
 * {
@@ -20,56 +23,117 @@ html {
 
 body {
     margin: 0;
-    background: var(--page-bg);
+    background: linear-gradient(135deg, #eef4ff 0%, #f8fafc 45%, #eef2f7 100%);
     color: var(--text);
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
     line-height: 1.55;
 }
 
-.resume-page {
+.resume-shell {
+    width: 100%;
+    padding: 24px;
+}
+
+.top-actions {
     width: min(100%, 980px);
-    margin: 28px auto;
-    padding: 42px;
+    margin: 0 auto 14px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.top-actions button {
+    border: 0;
+    border-radius: 999px;
+    padding: 10px 18px;
+    background: var(--accent);
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 10px 24px rgba(37, 99, 235, 0.24);
+}
+
+.top-actions button:hover {
+    background: var(--accent-dark);
+}
+
+.resume-page {
+    position: relative;
+    width: min(100%, 980px);
+    margin: 0 auto;
+    padding: 44px;
     background: var(--card-bg);
-    border-radius: 14px;
-    box-shadow: 0 12px 35px rgba(15, 23, 42, 0.12);
+    border: 1px solid rgba(226, 232, 240, 0.9);
+    border-radius: 22px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+.resume-page::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 8px;
+    background: linear-gradient(90deg, var(--accent), #38bdf8);
 }
 
 .resume-header {
     display: grid;
-    grid-template-columns: 1.3fr 1fr;
-    gap: 24px;
+    grid-template-columns: 1.35fr 1fr;
+    gap: 28px;
     align-items: start;
-    padding-bottom: 22px;
-    border-bottom: 2px solid var(--primary);
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--border);
+}
+
+.eyebrow {
+    margin: 0 0 8px;
+    color: var(--accent);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
 .identity-block h1 {
     margin: 0;
     color: var(--primary);
-    font-size: 38px;
-    line-height: 1.1;
-    letter-spacing: 0.5px;
+    font-size: 42px;
+    line-height: 1.05;
+    letter-spacing: 0.8px;
     text-transform: uppercase;
 }
 
 .role-title {
-    margin: 10px 0 0;
+    display: inline-block;
+    margin: 12px 0 0;
+    padding: 6px 12px;
     color: var(--accent);
-    font-size: 16px;
+    background: var(--accent-soft);
+    border: 1px solid #dbeafe;
+    border-radius: 999px;
+    font-size: 14px;
     font-weight: 700;
+}
+
+.summary-highlight {
+    margin: 12px 0 0;
+    color: var(--secondary);
+    font-size: 14px;
+    max-width: 620px;
 }
 
 .contact-block {
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 7px;
     margin: 0;
     color: var(--secondary);
     font-style: normal;
     text-align: right;
     word-break: break-word;
+    font-size: 14px;
 }
 
 .contact-block a {
@@ -83,17 +147,25 @@ body {
 }
 
 .resume-section {
-    padding: 22px 0 0;
+    padding-top: 24px;
 }
 
 .resume-section h2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     margin: 0 0 14px;
-    padding-bottom: 6px;
     color: var(--primary);
-    border-bottom: 1px solid var(--border);
-    font-size: 18px;
-    letter-spacing: 0.8px;
+    font-size: 16px;
+    letter-spacing: 1px;
     text-transform: uppercase;
+}
+
+.resume-section h2::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--border);
 }
 
 .resume-section h3 {
@@ -106,6 +178,10 @@ body {
     margin: 0 0 8px;
 }
 
+.profile-section p {
+    color: var(--secondary);
+}
+
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -113,30 +189,38 @@ body {
 }
 
 .skill-card {
-    padding: 13px 14px;
+    padding: 14px 15px;
     background: var(--section-bg);
     border: 1px solid var(--border);
-    border-radius: 10px;
+    border-radius: 14px;
 }
 
-.skill-card.full-width {
-    grid-column: 1 / -1;
+.skill-card:hover {
+    border-color: #bfdbfe;
+    background: #ffffff;
 }
 
 .skill-card h3 {
+    margin-bottom: 6px;
     color: var(--accent);
-    font-size: 14px;
+    font-size: 13px;
+    letter-spacing: 0.5px;
     text-transform: uppercase;
 }
 
 .skill-card p {
+    margin: 0;
     color: var(--secondary);
 }
 
 .experience-item,
 .project-item,
 .compact-item {
-    margin-bottom: 18px;
+    margin-bottom: 20px;
+    padding: 16px;
+    background: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: 16px;
 }
 
 .experience-item:last-child,
@@ -147,29 +231,32 @@ body {
 
 .item-header {
     display: grid;
-    grid-template-columns: 1.15fr 1fr;
+    grid-template-columns: 1.2fr 1fr;
     gap: 16px;
     align-items: start;
 }
 
 .company {
+    margin: 0;
     color: var(--accent);
     font-weight: 700;
 }
 
 .duration {
+    margin: 0;
     color: var(--muted);
     font-size: 14px;
     text-align: right;
 }
 
 ul {
-    margin: 8px 0 0;
+    margin: 10px 0 0;
     padding-left: 20px;
 }
 
 li {
-    margin-bottom: 6px;
+    margin-bottom: 7px;
+    color: var(--secondary);
 }
 
 li::marker {
@@ -179,47 +266,230 @@ li::marker {
 .two-column-section {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 28px;
+    gap: 20px;
 }
 
 .compact-item p {
     color: var(--secondary);
 }
 
-@media print {
+.checklist-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.check-card {
+    padding: 12px;
+    background: var(--accent-soft);
+    border: 1px solid #dbeafe;
+    border-radius: 14px;
+    color: var(--secondary);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+strong {
+    color: var(--primary);
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    .resume-shell {
+        padding: 18px;
+    }
+
+    .resume-page {
+        padding: 30px;
+        border-radius: 18px;
+    }
+
+    .resume-header {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .identity-block h1 {
+        font-size: 32px;
+    }
+
+    .contact-block {
+        text-align: left;
+    }
+
+    .skills-grid,
+    .two-column-section,
+    .checklist-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .item-header {
+        grid-template-columns: 1fr;
+        gap: 4px;
+    }
+
+    .duration {
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 480px) {
     body {
         background: #ffffff;
-        font-size: 12px;
+        font-size: 13.5px;
+    }
+
+    .resume-shell {
+        padding: 0;
+    }
+
+    .top-actions {
+        padding: 14px;
+        margin: 0;
     }
 
     .resume-page {
         width: 100%;
         margin: 0;
-        padding: 18px;
-        box-shadow: none;
+        padding: 22px;
+        border: 0;
         border-radius: 0;
+        box-shadow: none;
     }
 
-    .resume-section {
-        padding-top: 14px;
-    }
-
-    .resume-section h2 {
-        margin-bottom: 8px;
-        font-size: 14px;
+    .resume-page::before {
+        height: 6px;
     }
 
     .identity-block h1 {
-        font-size: 28px;
+        font-size: 26px;
+        line-height: 1.15;
     }
 
-    .role-title,
+    .role-title {
+        font-size: 13px;
+        padding: 5px 10px;
+    }
+
+    .resume-section {
+        padding-top: 20px;
+    }
+
+    .resume-section h2 {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    .resume-section h3 {
+        font-size: 14px;
+    }
+
+    .experience-item,
+    .project-item,
+    .compact-item,
+    .skill-card,
+    .check-card {
+        padding: 12px;
+        border-radius: 12px;
+    }
+
+    ul {
+        padding-left: 18px;
+    }
+
+    li {
+        margin-bottom: 5px;
+    }
+
+    .contact-block {
+        font-size: 13px;
+    }
+}
+
+@media print {
+    body {
+        background: #ffffff;
+        font-size: 11.5px;
+        line-height: 1.38;
+    }
+
+    .no-print {
+        display: none !important;
+    }
+
+    .resume-shell {
+        padding: 0;
+    }
+
+    .resume-page {
+        width: 100%;
+        margin: 0;
+        padding: 16px;
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .resume-page::before {
+        display: none;
+    }
+
+    .resume-header {
+        padding-bottom: 12px;
+        border-bottom: 1px solid #111827;
+    }
+
+    .identity-block h1 {
+        font-size: 26px;
+    }
+
+    .role-title {
+        padding: 0;
+        background: transparent;
+        border: 0;
+        color: #111827;
+        font-size: 12px;
+    }
+
+    .summary-highlight,
+    .contact-block {
+        font-size: 11px;
+    }
+
+    .resume-section {
+        padding-top: 12px;
+    }
+
+    .resume-section h2 {
+        margin-bottom: 7px;
+        font-size: 13px;
+    }
+
+    .resume-section h2::after {
+        background: #d1d5db;
+    }
+
     .resume-section h3 {
         font-size: 12px;
     }
 
-    .skill-card {
-        padding: 8px;
+    .experience-item,
+    .project-item,
+    .compact-item,
+    .skill-card,
+    .check-card {
+        padding: 0;
+        border: 0;
+        background: transparent;
+        border-radius: 0;
+    }
+
+    .skills-grid,
+    .checklist-grid {
+        gap: 8px;
     }
 
     li {
@@ -229,5 +499,15 @@ li::marker {
     a {
         color: inherit;
         text-decoration: none;
+    }
+
+    .resume-page,
+    .resume-section,
+    .experience-item,
+    .project-item,
+    .compact-item,
+    .skill-card {
+        break-inside: avoid;
+        page-break-inside: avoid;
     }
 }
